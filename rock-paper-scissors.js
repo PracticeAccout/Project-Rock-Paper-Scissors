@@ -43,3 +43,40 @@ function playRound(playerSelection, computerSelection){
     return `You won! ${playerSelection} beats ${computerSelection}.`;
 }
 
+// Create game
+function game(){
+    // TODO: Keep score
+    let computer = 0;
+    let user = 0;
+    // TODO: Call playRound 5 times
+    for (let round = 0; round < 5; round++){
+        const playerSelection = prompt("Rock, Paper or Scissors?");
+        const computerSelection = computerPlay();
+        winner = playRound(playerSelection, computerSelection);
+        // console.log(winner);
+        if (winner.includes("You Lose")){
+            computer++;
+            continue
+        }
+        if (winner.includes("You won")){
+            user++;
+            continue
+        }
+        if (winner.includes("We")){
+            round -= 1;
+        }
+        // Report winner
+/*         if (computer.computer === 3 || user.user === 3){
+            return `The`
+        } 
+ */    }
+    // TODO: Report winner
+    if (computer > user){
+        return alert(`You lose! I won ${computer} rounds.`);
+    } else {
+        return alert(`Congratulations!! You won ${user} rounds.`);
+    }
+}
+
+/* console.log(playRound("paper", computerSelection)); */
+console.log(game());

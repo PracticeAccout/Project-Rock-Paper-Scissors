@@ -6,4 +6,6 @@ Requirements
     repeated `rock, paper, scissors`, I chose the second one. A function with
     a random number between 0 - 2 will always tend to return either more 1s, or 2s, etc. 
 
-2. Write a function that plays a single round. The function takes two parameters: playerSelection and computerSelection. It returns a string declaring who won. 
+2. Write a function called `playRound` that plays a single round. The function takes two parameters: `playerSelection` and `computerSelection`. It returns a string declaring who won. `playerSelection` should be case-insensitive 
+
+3. Write a function called `game` that calls `playRound` 5 times. and keeps score until the computer or the user wins.   
