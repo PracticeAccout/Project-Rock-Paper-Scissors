@@ -1,22 +1,19 @@
 // Create random number 
 function randomNum(){
     // Generates numbers 0-8
-    let rand = (Math.random().toFixed(1) * 10) - 1;
-    if (rand < 0){ // if random is 0-1
-        // console.log(rand);
-        return 0;
-    } else {
-        // console.log(rand);
-        return rand;
-    }
+    let rand = Math.floor(Math.random() * 9);
+    return rand;
     
 }
 // Computer choice
 function computerPlay(){
     let arr = ["Rock", "Paper", "Scissors", 
-                "Rock", "Paper", "Scissors", 
-                "Rock", "Paper", "Scissors"];
-    return arr[randomNum()]
+                "Paper", "Rock", "Scissors", 
+                "Scissors", "Paper", "Rock"];
+    let thiSelection = arr[randomNum()]
+    // console.log(thiSelection);
+    return thiSelection;
+
 }
 
 // Create one round competition
@@ -50,7 +47,8 @@ function game(){
     let user = 0;
     // TODO: Call playRound 5 times
     for (let round = 0; round < 5; round++){
-        const playerSelection = prompt("Rock, Paper or Scissors?");
+        // const playerSelection = prompt("Rock, Paper or Scissors?");
+        const playerSelection = computerPlay(); 
         const computerSelection = computerPlay();
         winner = playRound(playerSelection, computerSelection);
         // console.log(winner);
@@ -72,11 +70,11 @@ function game(){
  */    }
     // TODO: Report winner
     if (computer > user){
-        return alert(`You lose! I won ${computer} rounds.`);
+        return console.log(`You lose! I won ${computer} rounds.`);
     } else {
-        return alert(`Congratulations!! You won ${user} rounds.`);
+        return console.log(`Congratulations!! You won ${user} rounds.`);
     }
 }
 
-/* console.log(playRound("paper", computerSelection)); */
-console.log(game());
+// Play Game
+game();
