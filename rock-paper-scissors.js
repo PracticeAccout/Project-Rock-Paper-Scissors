@@ -8,9 +8,9 @@ function randomNum(){
     
 // Computer choice
 function computerPlay(){
-    let arr = ["Rock", "Paper", "Scissors", 
-                "Rock", "Paper", "Scissors", 
-                "Rock", "Paper", "Scissors"];
+    let arr = ["rock", "paper", "scissors", 
+                "paper", "scissors", "rock", 
+                "scissors", "rock", "paper"];
     return arr[randomNum()]
 }
 
@@ -20,64 +20,67 @@ function playRound(e){ // passing the event: which button was pressed
     // Paper - Rock   || Paper - Scissors - || Paper-Paper
     // Rock- Scissors || Rock - Rock 
     // Scissors - Scissors
-    // Now playRound becomes the game() function to
+    // Get computer selection
+    e.stopPropagation();
     const computerSelection = computerPlay();
-    alert(e.target.id); // id of the clicked btn 
-    alert(computerSelection); 
+    // alert(e.target.id); // id of the clicked btn 
+    // alert(computerSelection); 
 
 
-    if (computerSelection.toLowerCase() === e.target.id.toLowerCase()){
-        game("We're tied");
+    if (computerSelection === e.target.id){
+        return thisWinner("You've tied");
     } 
-    if (computerSelection.toLowerCase() === "paper" && e.target.id.toLowerCase() === "rock"){
-        game("You Lose! Paper beats Rock");
+    if (computerSelection === "paper" && e.target.id === "rock"){
+        return thisWinner("You Lose! Paper beats Rock");
     }  
-    if (computerSelection.toLowerCase() === "rock"  && e.target.id.toLowerCase() === "scissors"){
-        game("You Lose! Rock beats Scissors");
+    if (computerSelection === "rock"  && e.target.id === "scissors"){
+        return thisWinner("You Lose! Rock beats Scissors");
     }
-    if (computerSelection.toLowerCase() === "scissors" && e.target.id.toLowerCase() === "paper") {
-        game("You Lose! Scissors beats Paper");
+    if (computerSelection === "scissors" && e.target.id === "paper") {
+        return thisWinner("You Lose! Scissors beats Paper");
     }
-    game(`You won! ${e.target.id} beats ${computerSelection}.`);
+    thisWinner(`You won! ${e.target.id} beats ${computerSelection}.`);
 }
 
 
 // Create game
-function game(winner){
-    // TODO: Keep score
-    let computer = 0;
-    let user = 0;
-    // TODO: Call playRound 5 times
-    // winner = playRound(playerSelection, computerSelection);
+function thisWinner(winner){
 
+    // Check winner
+    // alert(winner);
+    
     // Get current score of each player
-    const computerScore = document.getElementById('computer-score').textContent;
-    const yourScore = document.getElementById('your-score').textContent;
+    let computerScore = computerScoreNode.textContent;
+    let yourScore = yourScoreNode.textContent; 
 
-
-    alert(winner);
+   
     if (winner.includes("You Lose")){
-        computer++;
-        score.appendChild(eachScore).textContent = computer;
+        computerScore++;
+        computerScoreNode.textContent = computerScore;
     }
     if (winner.includes("You won")){
-        user++;
-        score.appendChild(eachScore);
+        yourScore++;
+        yourScoreNode.textContent = yourScore;
+
     }
-    if (winner.includes("We")){
-        score.appendChild(eachScore);
+    if (winner.includes("You've")){
+        alert(winner);
 
     }
     // TODO: Report winner
-    if (computer == 5){
+    if (computerScore == 5){
         theWinner.textContent = `You lose! I won ${computer} rounds.`;
         // return alert(`You lose! I won ${computer} rounds.`);
     }  
-    if (user == 5) {
+    if (yourScore == 5) {
         theWinner.textContent = `Congratulations!! You won ${user} rounds.`;
         // return alert(`Congratulations!! You won ${user} rounds.`);
     }
 }
+
+// TODO: Get node score of each player
+let computerScoreNode = document.getElementById('computer-score');
+let yourScoreNode = document.getElementById('your-score');
 
 // Get all elements with class btn
 const theBtns = document.querySelectorAll('.btn');
