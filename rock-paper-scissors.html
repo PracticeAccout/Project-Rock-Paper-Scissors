@@ -5,6 +5,7 @@
         <meta name="description" content="Rock Paper Scissors Game"> 
         <meta name="author" content="Yuniel Reyes">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/repos/Project-Rock-Paper-Scissors/rps-style.css">
         <title></title>
         <!-- Identify three ways to include JavaScript in a page.
         1. Through a n external file: <script src="script.js"></script>
@@ -14,7 +15,19 @@
     </head>
     <body>
 
-        <script src="/rock-paper-scissors.js">
+        <div id="btns-container">
+            <button id="rock" class="btn">Rock</button>
+            <button id="paper" class="btn">Paper</button>
+            <button id="scissors" class="btn">Scissors</button>  
+        </div>
+
+        <div id="score">
+            <div>Computer<p id="computer-score">0</p></div>
+            <div>You<p id="your-score">0</p></div>
+        </div>
+        <div id="winner"></div>
+
+        <script src="/repos/Project-Rock-Paper-Scissors/rock-paper-scissors.js">
         </script>
     </body>
 
