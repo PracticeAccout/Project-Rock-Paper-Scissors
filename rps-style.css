@@ -1,12 +1,151 @@
-#btns-container {
-    background-color: aqua;
+/* Reset general style*/
+* {
+    margin: 0;
+    padding: 0;
+    /* background-color: beige; */
+}
+
+/* ==== HEADER */
+#header{
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 100px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    padding-top: 20px;
+}
+
+.header-child {
+    display: flex;
+    justify-content: center;
+    width: 250px;
+    height: 110px;
+    align-items: center;
+    background-size: 250px;
+}
+
+.header-child.rock {
+    background-image: url("/repos/Project-Rock-Paper-Scissors/images/white-brush.png");
+    background-repeat: no-repeat;
+}
+
+.header-child.paper {
+    background-image: url("/repos/Project-Rock-Paper-Scissors/images/black-brush.png");
+    background-repeat: no-repeat;
+}
+
+.header-child.paper > h2 {
+    color: white;
+}
+
+.header-child.scissors {
+    background-image: url("/repos/Project-Rock-Paper-Scissors/images/yellow-brush.png");
+    background-repeat: no-repeat;    
+}
+
+h2{
+    background-color: transparent;
 }
 
 
-#score {
-    background-color: antiquewhite;
+/* ==RESULTS== */
+#results {
+    padding: 40px 0px 70px 0px; 
+}
+
+#results-short {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+}
+
+.results-short-text{
+    font-size: 35px;
+}
+
+#results-long{
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+} 
+
+.results-long-text{
+    font-size: 20px;
+}
+
+/* =SCORE= */
+#score {
+    display: flex;
+    justify-content: center;
+    padding: 50px 0 40px 0;
+    gap: 430px;
+}
+
+#player-text, #your-score, #computer-text, 
+#computer-score {
+    display: inline;
+    font-size: 20px;
+}
+
+
+/* Results images*/
+#results-image-box{
+    display: flex;
+    justify-content: center;
+    gap: 260px;
+    margin-bottom: -190px;
+    /*position: relative;
+    z-index: -1;*/
+}
+
+#player-box, #computer-box{
+    display: flex;
+    justify-content: center;
+    width: 250px;
+} 
+
+#rock-box, #paper-box {
+    margin-right: -220px;
+}
+
+#rock-box{
+    position: relative;
+    bottom: -10px;
+}
+
+#scissors-box{
+    position: relative;
+    bottom: -18px;
+}
+
+#paper-image{
+    position: relative;
+    bottom: 25px;
+}
+
+/* = WHITE BAND TO HIDE THE CHOSE OPTION =*/
+#hide-banner {
+    background-color: white;
+    height: 160px;
+    position: relative;
+    margin-bottom: 10px;
+}
+
+
+
+/* BUTTONS */
+button {
+    cursor: pointer;
+}
+
+
+#btns-container {
+    padding: 30px 0 40px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.each-button-box{
+    display: flex;
+    justify-content: center;
 }

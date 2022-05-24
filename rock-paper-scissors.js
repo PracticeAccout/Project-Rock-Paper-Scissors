@@ -65,16 +65,13 @@ function thisWinner(winner){
     }
     if (winner.includes("You've")){
         alert(winner);
-
     }
     // TODO: Report winner
     if (computerScore == 5){
-        theWinner.textContent = `You lose! I won ${computer} rounds.`;
-        // return alert(`You lose! I won ${computer} rounds.`);
+        return theWinner.textContent = "You lose!";
     }  
     if (yourScore == 5) {
-        theWinner.textContent = `Congratulations!! You won ${user} rounds.`;
-        // return alert(`Congratulations!! You won ${user} rounds.`);
+        return theWinner.textContent = "Congratulations!! You won!";
     }
 }
 
@@ -86,4 +83,8 @@ let yourScoreNode = document.getElementById('your-score');
 const theBtns = document.querySelectorAll('.btn');
 // Add listener to each button 
 theBtns.forEach((btn => btn.addEventListener('click', playRound)));
+
+// Get element to put winner
+const theWinner = document.getElementById('winner');
+
 

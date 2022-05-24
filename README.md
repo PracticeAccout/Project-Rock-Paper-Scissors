@@ -6,7 +6,8 @@
     repeated `rock, paper, scissors`, I chose the second one. A function with
     a random number between 0 - 2 will always tend to return either more 1s, or 2s, etc. 
 
-2. Write a function called `playRound` that plays a single round. The function takes two parameters: `playerSelection` and `computerSelection`. It returns a string declaring who won. `playerSelection` should be case-insensitive 
+2. Write a function called `playRound` that plays a single round. The function takes two parameters: `playerSelection` and 
+`computerSelection`. It returns a string declaring who won. `playerSelection` should be case-insensitive 
 
 3. Write a function called `game` that calls `playRound` 5 times. and keeps score until the computer or the user wins.
 
@@ -18,6 +19,14 @@
     > The event listener should call the `playRound()` function with the user selection every time the button is clicked. 
 4. Create a div to display the results using DOM methods.
 5. Show running score.
-    > Get the actual score of each player. Every time the function `ThisWinner` is called, the variables `computerScore` and `yourScore` update its value. Each time the user or the computer wins, 1 point is added.           
-6. Show winner once a player reaches 5 points 
+    > Get the actual score of each player. Every time the function `ThisWinner` is called, the variables `computerScore` 
+    and `yourScore` update its value. Each time the user or the computer wins, 1 point is added.           
+6. Show winner once a player reaches 5 points
+
+## Requirements for third version (refactoring)
+1. Add header to the game
+2. Show result
+3. Add hand-boxes
+ >Each hand show the picked up option
+4. Add buttons
       
