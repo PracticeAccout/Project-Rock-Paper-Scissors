@@ -25,12 +25,12 @@
 }
 
 .header-child.rock {
-    background-image: url("images/white-brush.png");
+    background-image: url("/images/white-brush.png");
     background-repeat: no-repeat;
 }
 
 .header-child.paper {
-    background-image: url("images/black-brush.png");
+    background-image: url("/images/black-brush.png");
     background-repeat: no-repeat;
 }
 
@@ -39,7 +39,7 @@
 }
 
 .header-child.scissors {
-    background-image: url("images/yellow-brush.png");
+    background-image: url("/images/yellow-brush.png");
     background-repeat: no-repeat;    
 }
 
