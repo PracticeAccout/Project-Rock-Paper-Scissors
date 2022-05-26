@@ -1,7 +1,5 @@
 # Project-Rock-Paper-Scissors
-<<<<<<< HEAD
 ## Requirements
-=======
 ## Requirements for first version
 >>>>>>> rps-ui
 1. Create a function called `computerPlay` that returns randomly either "Rock", "Paper" or "Scissors".
