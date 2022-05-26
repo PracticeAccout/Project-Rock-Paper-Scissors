@@ -39,7 +39,7 @@
 }
 
 .header-child.scissors {
-    background-image: url("/repos/Project-Rock-Paper-Scissors/images/yellow-brush.png");
+    background-image: url("images/yellow-brush.png");
     background-repeat: no-repeat;    
 }
 
