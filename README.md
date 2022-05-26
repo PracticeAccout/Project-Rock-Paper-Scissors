@@ -43,6 +43,7 @@
     >  * Add to new picked options
 6. Add play again option
     >   * Create box to show play again button and final results result
+    >   * Create `restartGame()` function
 
       
      
