@@ -20,6 +20,7 @@
             <div class="header-child scissors"><h2>Scissors</h2></div>
         </div>
 
+
         <div id="results">
             <div id="results-short"><h3 class="results-short-text">Play your weapons</h3></div>
             <div id="results-long"><h3 class="results-long-text">Get 5 points and win!</h3></div>    
@@ -36,49 +37,60 @@
             </div>
         </div>
 
-
         <div id="results-image-box">
             <div id="player-box">
-                <div id="rock-box" class="each-weapon-box">
+                <div id="player-rock-box">
                     <img src="/repos/Project-Rock-Paper-Scissors/rpc-images/fist (voted).png" width="300" alt="chose-rock"/>
                 </div>
-                <div id="paper-box" class="each-weapon-box">
+                <div id="player-paper-box">
                     <img id="paper-image" src="/repos/Project-Rock-Paper-Scissors/rpc-images/palm-voted.png" width="300" alt="chose-paper"/>                    
                 </div>
-                <div id="scissors-box" class="each-weapon-box">
+                <div id="player-scissors-box">
                     <img src="/repos/Project-Rock-Paper-Scissors/rpc-images/scissors(voted).png" width="300" alt="chose-scissors"/>                    
                 </div>
-            </div>
+            </div>  
+
             <div id="computer-box">
-                <div id="rock-box" class="each-weapon-box">
+                <div id="computer-rock-box">
                     <img src="/repos/Project-Rock-Paper-Scissors/rpc-images/fist (voted).png" width="300" alt="chose-rock"/>
                 </div>
-                <div id="paper-box" class="each-weapon-box">
+                <div id="computer-paper-box">
                     <img id="paper-image" src="/repos/Project-Rock-Paper-Scissors/rpc-images/palm-voted.png" width="300" alt="chose-paper"/>                    
                 </div>
-                <div id="scissors-box" class="each-weapon-box">
+                <div id="computer-scissors-box">
                     <img src="/repos/Project-Rock-Paper-Scissors/rpc-images/scissors(voted).png" width="300" alt="chose-scissors"/>                    
                 </div>
             </div>
         </div>
         <div id="hide-banner"></div>
 
+        <div id="play-again-box" class="play-again-box-inactive">
+            <div id="play-again-items">
+                <button id="play-again" class="play-again-inactive">Play Again</button>
+            </div>
+        </div>        
 
         <div id="btns-container">
-            <div id="rock-button" class="each-button-box">
-                <input type="image" src="rpc-images/fist (button).png" width="150"></input>
+            <div class="each-button-box">
+                <input id="rock" class="image-button" type="image" src="rpc-images/fist (button).png" width="150"></input>
             </div>
             
-            <div id="paper-button" class="each-button-box">
-                <input type="image" src="rpc-images/palm (button).png" width="150">
+            <div class="each-button-box">
+                <input id="paper" class="image-button" type="image" src="rpc-images/palm (button).png" width="150">
             </div>
 
-            <div id="scissors-button" class="each-button-box">
-                <input type="image" src="rpc-images/scissors(button).png" width="140">
+            <div class="each-button-box">
+                <input id="scissors" class="image-button" type="image" src="rpc-images/scissors(button).png" width="140">
             </div>
+        </div>
 
+        <div id="copyright">
+            <h4>Copyright &#169; yreyes</h4>
         </div>  
-  
+
+
+
+
 
         <script src="/repos/Project-Rock-Paper-Scissors/rock-paper-scissors.js">
         </script>

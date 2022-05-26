@@ -25,8 +25,25 @@
 
 ## Requirements for third version (refactoring)
 1. Add header to the game
-2. Show result
+2. Show result: 
+    > * Create a div to display the results using DOM methods.
+    > * Add two sections -one for a short result like `you won`, and one for long 
+    results like `rock beats scissors`
+    > * Get those nodes references
 3. Add hand-boxes
- >Each hand show the picked up option
+    > Each hand show the picked option
 4. Add buttons
+    > Update event listener -the node reference part
+     Event listener call `playRound()`
+     `playRound()` should show 
+5. Create function called `raiseHand()`
+    >  * The function takes two args: playerSelection and computerSelection
+    >  * If "picked-option" class:
+    >  * Remove 
+    >  * Add to new picked options
+6. Add play again option
+    >   * Create box to show play again button and final results result
+
+      
+     
       
