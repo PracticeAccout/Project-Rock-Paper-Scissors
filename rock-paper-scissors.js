@@ -49,10 +49,8 @@ function raiseHand(playerSelection, computerSelection){
     }
     if (computerSelection == 'scissors'){
         computerScissorBox.classList.add('picked-option-one');
-    }
-    
+    }   
 }
-
 
 
 
@@ -96,45 +94,6 @@ function playRound(e){ // passing the event: which button was pressed
 
 
 // Create game
-<<<<<<< HEAD
-function game(){
-    // TODO: Keep score
-    let computer = 0;
-    let user = 0;
-    // TODO: Call playRound 5 times
-    for (let round = 0; round < 5; round++){
-        // const playerSelection = prompt("Rock, Paper or Scissors?");
-        const playerSelection = computerPlay(); 
-        const computerSelection = computerPlay();
-        winner = playRound(playerSelection, computerSelection);
-        // console.log(winner);
-        if (winner.includes("You Lose")){
-            computer++;
-            continue
-        }
-        if (winner.includes("You won")){
-            user++;
-            continue
-        }
-        if (winner.includes("We")){
-            round -= 1;
-        }
-        // Report winner
-/*         if (computer.computer === 3 || user.user === 3){
-            return `The`
-        } 
- */    }
-    // TODO: Report winner
-    if (computer > user){
-        return console.log(`You lose! I won ${computer} rounds.`);
-    } else {
-        return console.log(`Congratulations!! You won ${user} rounds.`);
-    }
-}
-
-// Play Game
-game();
-=======
 function thisWinner(winner){
 
     // Check winner
@@ -236,4 +195,3 @@ theBtns.forEach((btn => btn.addEventListener('click', playRound)));
 const theWinner = document.getElementById('winner');
 
 
->>>>>>> rps-ui
