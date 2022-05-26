@@ -1,4 +1,5 @@
 # rock-paper-scissors
+[Live Demo](https://practiceaccout.github.io/rock-paper-scissors/)
 ## Requirements for first version
 1. Create a function called `computerPlay` that returns randomly either "Rock", "Paper" or "Scissors".
     > function `computerPlay`: Explanation: The idea is generate a random number that will be the selection in an array where each index corresponds
