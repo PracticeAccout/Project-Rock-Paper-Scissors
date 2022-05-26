@@ -25,12 +25,12 @@
 }
 
 .header-child.rock {
-    background-image: url("/repos/Project-Rock-Paper-Scissors/images/white-brush.png");
+    background-image: url("images/white-brush.png");
     background-repeat: no-repeat;
 }
 
 .header-child.paper {
-    background-image: url("/repos/Project-Rock-Paper-Scissors/images/black-brush.png");
+    background-image: url("images/black-brush.png");
     background-repeat: no-repeat;
 }
 
